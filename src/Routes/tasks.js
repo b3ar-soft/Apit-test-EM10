@@ -47,7 +47,7 @@ async function updateTask(req, res) {
     const db = await connect();
     const result = await db.collection('task').updateOne({_id: ObjectID(id)}, {$set: newTask});
     res.json({
-        message:`Task ${id} Updated`;
+        message:`Task ${id} Updated`,
     });
 }
 
